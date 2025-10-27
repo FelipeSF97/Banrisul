@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 namespace _12_desafio_sistema_bancario
 {
     class Banco
-    {
+    {   // Dicionário de clientes e suas contas
+        // CPF → Nome
+        static Dictionary<string, string> clientes = new Dictionary<string, string>();
+
+         // CPF → Lista de contas
+        static Dictionary<string, List<string>> contas = new Dictionary<string, List<string>>();
+
           //new Dictionary<string, Cliente>();
         static void Main(string[] args)
         {
@@ -74,36 +80,51 @@ namespace _12_desafio_sistema_bancario
             Console.WriteLine("Digite o CPF do cliente: ");
             string cpfCliente = Console.ReadLine();
 
-            //clientes.Add(nomeCliente, cpfCliente);
-            Cliente.clientes.Add(cpfCliente, nomeCliente);  
+             if (!clientes.ContainsKey(cpfCliente))
+            {
+                clientes.Add(cpfCliente, nomeCliente);
+                contas.Add(cpfCliente, new List<string>()); // cria lista de contas vazia para o cliente
+                Console.WriteLine($"Cliente {nomeCliente} cadastrado com sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Cliente já cadastrado!");
+            }
         }
         
         static void criarConta()
         {
-            int numContaCorrente = 1;
-            int numContaPoupanca = 1;
-            Console.WriteLine("Digite o CPF da conta do cliente.");
+            //int numContaCorrente = 1;
+            //int numContaPoupanca = 1;
+            Console.WriteLine("Digite o CPF do cliente.");
             string cpfCliente = Console.ReadLine();
 
-            if (Cliente.clientes.ContainsKey(cpfCliente))
+            if (clientes.ContainsKey(cpfCliente))
             {
                 Console.WriteLine("Digite o tipo de conta a ser criada\n(CORRENTE/POUPANÇA): ");
-                string conta = Console.ReadLine().ToUpper(); ;
-                if (conta == "corrente")
-                {
-                    Console.WriteLine("Você está criando CONTA CORRENTE.");
-                    numContaCorrente++;
-                }
-                else if (conta == "POUPANÇA")
-                {
-                    Console.WriteLine("Você está criando uma CONTA POUPANÇA.");
-                    numContaPoupanca++;
-                }
-                else
-                {
-                    Console.WriteLine("Cliente não cadastrado!");
-                }
-            }
+                string tipoConta = Console.ReadLine().ToUpper();
+
+                Console.WriteLine("Digite o número da conta: ");
+                string numeroConta = Console.ReadLine();
+                
+                contas[cpfCliente].Add($"{numeroConta} ({tipoConta})");
+                Console.WriteLine($"Conta {tipoConta} criada com sucesso! Número: {numeroConta}");
+            }   
+                // if (conta == "corrente")
+                // {
+                //     Console.WriteLine("Você está criando CONTA CORRENTE.");
+                //     numContaCorrente++;
+                // }
+                // else if (conta == "POUPANÇA")
+                // {
+                //     Console.WriteLine("Você está criando uma CONTA POUPANÇA.");
+                //     numContaPoupanca++;
+                // }
+                // else
+                // {
+                //     Console.WriteLine("Cliente não cadastrado!");
+                // }
+            
             else
             {
                 Console.WriteLine("CPF inválido!");
@@ -115,44 +136,37 @@ namespace _12_desafio_sistema_bancario
         //Banco deve permitir a listagem de clientes e suas respectivas contas;
         static void listarCliente()
         {
-            Console.WriteLine("Lista de clientes:\n");
-            var cpfClientes = new List<string>(Cliente.clientes.Count);
-            List<string> cpfs = new List<string>(Cliente.clientes.Keys);
-            List<string> nomes = new List<string>(Cliente.clientes.Values);
-            for (int i = 0; i < Cliente.clientes.Count; i++)
+            Console.WriteLine("\nLista de clientes:\n");
+            if(clientes.Count == 0)
             {
-                string nome = nomes[i];
+                Console.WriteLine("Nenhum cliente cadastrado.");
+                return;
+            }
+            //var cpfClientes = new List<string>(Cliente.clientes.Count);
+            List<string> cpfs = new List<string>(clientes.Keys);
+            //List<string> nomes = new List<string>(Cliente.clien  tes.Values);
+            //for (int i = 0; i < Cliente.clientes.Count; i++)
+            for (int i = 0; i < cpfs.Count; i++)
+            {
+                //string nome = nomes[i];
                 string cpf = cpfs[i];
-                Console.WriteLine($"");
+                Console.WriteLine($"\nCliente: {clientes[cpf]} | CPF: {cpf}");
+                if (!contas.ContainsKey(cpf) || contas[cpf].Count == 0)
+                {
+                    Console.WriteLine("  - Nenhuma conta cadastrada.");
+                }else
+                {
+                    List<string> listaContas = contas[cpf];
+
+                    for (int j = 0; j < listaContas.Count; j++)
+                    {
+                        string conta = listaContas[j];
+                        Console.WriteLine($"  - Conta: {conta}");
+                    }
+                }
             }
         }
 
-        /*static void ListarObras()
-        {
-            Console.WriteLine("\nLista de obras:");
-            var idsObras = new List<int>(obras.Keys);
-            for (int i = 0; i < idsObras.Count; i++)
-            {
-                int id = idsObras[i];
-
-                Console.WriteLine($"Obra: ({id}) {obras[id]} - Autor: {autores[id]} - Quantidade: {quantidades[id]} unidade(s)");
-            }
-        }
-
-        static void ListarLeitores()
-        {
-            Console.WriteLine("\nLista de leitores:");
-
-            var idsLeitores = new List<int>(leitores.Keys);
-            for (int i = 0; i < idsLeitores.Count; i++)
-            {
-                int id = idsLeitores[i];
-
-                Console.WriteLine($"Leitor: ({id}) {leitores[id]}");
-            }
-        }*/
-
-        //O Banco deve permitir a consulta do saldo de uma ContaBancaria
         static void consultarSaldo()
         {
 
