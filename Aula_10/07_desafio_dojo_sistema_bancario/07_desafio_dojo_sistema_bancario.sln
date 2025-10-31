@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 15 for Windows Desktop
+VisualStudioVersion = 15.0.34829.251
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_desafio_dojo_sistema_bancario", "07_desafio_dojo_sistema_bancario\07_desafio_dojo_sistema_bancario.csproj", "{A7CD6A75-1658-412D-8959-A49DDA80C5BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7CD6A75-1658-412D-8959-A49DDA80C5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CD6A75-1658-412D-8959-A49DDA80C5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CD6A75-1658-412D-8959-A49DDA80C5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CD6A75-1658-412D-8959-A49DDA80C5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AF90391-67B2-4932-B18B-AE4763FE6741}
+	EndGlobalSection
+EndGlobal
