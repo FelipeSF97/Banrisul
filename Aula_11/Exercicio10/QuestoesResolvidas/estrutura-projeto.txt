@@ -1,0 +1,102 @@
+dotnet build
+Versão do MSBuild 17.8.43+f0cbb1397 para .NET
+  Determining projects to restore...
+  Nothing to do. None of the projects specified contain packages to restore.
+  MeuPrimeiroProjeto -> C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiro
+  Projeto\bin\Debug\MeuPrimeiroProjeto.exe
+
+Compilação com êxito.
+    0 Aviso(s)
+    0 Erro(s)
+
+Tempo Decorrido 00:00:10.47
+
+dotnet clean
+Versão do MSBuild 17.8.43+f0cbb1397 para .NET
+Compilação de 03/11/2025 15:34:03 iniciada.
+     1>Projeto "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\
+       MeuPrimeiroProjeto.csproj" no nó 1 (Clean destino(s)).
+     1>CoreClean:
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\bin\Debug\MeuPrimeiroProjeto.exe.config".
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\bin\Debug\MeuPrimeiroProjeto.exe".
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\bin\Debug\MeuPrimeiroProjeto.pdb".
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\obj\Debug\MeuPrimeiroProjeto.csproj.CoreCompileInputs.cache".
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\obj\Debug\MeuPrimeiroProjeto.exe".
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\obj\Debug\MeuPrimeiroProjeto.pdb".
+         Excluindo o arquivo "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPr
+         imeiroProjeto\obj\Debug\MeuPrimeiroProjeto.csproj.AssemblyReference.cache".
+     1>Projeto de compilação pronto "C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjet
+       o\MeuPrimeiroProjeto\MeuPrimeiroProjeto.csproj" (Clean destino(s)).
+
+Compilação com êxito.
+    0 Aviso(s)
+    0 Erro(s)
+
+Tempo Decorrido 00:00:00.27
+
+
+dotnet build
+Versão do MSBuild 17.8.43+f0cbb1397 para .NET
+  Determining projects to restore...
+  Nothing to do. None of the projects specified contain packages to restore.
+  MeuPrimeiroProjeto -> C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiro
+  Projeto\bin\Debug\MeuPrimeiroProjeto.exe
+
+Compilação com êxito.
+    0 Aviso(s)
+    0 Erro(s)
+
+Tempo Decorrido 00:00:00.57
+
+
+cd bin\
+
+C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin>dir
+ O volume na unidade C é Banrisul
+ O Número de Série do Volume é 8ACE-B05E
+
+ Pasta de C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin
+
+03/11/2025  15:16    <DIR>          .
+03/11/2025  15:16    <DIR>          ..
+03/11/2025  15:34    <DIR>          Debug
+               0 arquivo(s)              0 bytes
+               3 pasta(s)   851.735.814.144 bytes disponíveis
+
+C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\bin>
+
+
+cd ..
+
+cd obj\
+
+C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj>dir
+ O volume na unidade C é Banrisul
+ O Número de Série do Volume é 8ACE-B05E
+
+ Pasta de C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj
+
+03/11/2025  15:16    <DIR>          .
+03/11/2025  15:16    <DIR>          ..
+03/11/2025  15:34    <DIR>          Debug
+               0 arquivo(s)              0 bytes
+               3 pasta(s)   851.734.335.488 bytes disponíveis
+
+C:\Users\E38314\Treinamento_Banrisul\03_linguagem_CSharp\Aula_11\MeuPrimeiroProjeto\MeuPrimeiroProjeto\obj>
+
+
+1. Qual a diferença entre dotnet run e dotnet build?
+dotnet run compila e executa o arquivo enquanto o dotnet build apenas compila.
+
+2. Para que serve a pasta `obj/`?
+Para armazenar aquivos temporários e intermediários executados no processo de build
+
+3. Onde fica o executável final do projeto?
+Na pasta fonte do projeto
+
