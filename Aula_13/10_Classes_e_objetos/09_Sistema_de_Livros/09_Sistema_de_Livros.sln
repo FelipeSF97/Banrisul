@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 15 for Windows Desktop
+VisualStudioVersion = 15.0.34829.251
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Sistema_de_Livros", "09_Sistema_de_Livros\09_Sistema_de_Livros.csproj", "{30D2C825-AABB-4001-A8AC-A5269011EFCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D2C825-AABB-4001-A8AC-A5269011EFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D2C825-AABB-4001-A8AC-A5269011EFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D2C825-AABB-4001-A8AC-A5269011EFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D2C825-AABB-4001-A8AC-A5269011EFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C3A7E36-2BBB-4075-9FD3-D21C01525FDF}
+	EndGlobalSection
+EndGlobal
